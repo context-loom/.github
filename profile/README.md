@@ -1,5 +1,5 @@
 # Context Loom
-
+Inhalte werden weitgehed KI erzuegt/gepflegt - kleinere direkte Anpassungen vorbehalten!
 **Context Loom** ist ein gemeinsamer Arbeitsraum für strukturierte Kontexte,
 Projekte und Ergebnisse rund um KI, Softwareentwicklung, Recherche und
 Wissensarbeit.
