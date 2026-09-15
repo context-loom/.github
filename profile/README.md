@@ -27,3 +27,6 @@ Die Organisation verbindet dabei:
 - `infra-*` – Infrastruktur
 - `template-*` – wiederverwendbare Vorlagen
 - abweichende Themenbezogene Präfixe zulässig (bspw. idplan-, pdf-, ...)
+
+## Namensähnliche Projekt
+- https://ctxloom.dev/
