@@ -18,6 +18,11 @@ Die Organisation verbindet dabei:
 - wiederverwendbare Standards und Werkzeuge
 - persönliche und unternehmerische Themen
 
+## Zusätzliche Arbeitsplattform
+
+Ergänzend zu den Repositories steht eine zusätzliche Arbeitsplattform über den
+Account **ai.fkm.net@gmail.com** zur Verfügung.
+
 ## Struktur
 
 - `_workbench` – Eingang, Werkbank und frühe Themen
