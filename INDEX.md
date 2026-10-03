@@ -84,4 +84,4 @@ Der Index beschreibt Themen nur kurz. Fachliche Details und Arbeitsstände bleib
 
 Neue Themen können in `_workbench` beginnen. Sobald ein Bereich dauerhaft eigenständig entwickelt, versioniert oder betrieben wird, wird er in ein eigenes Repository ausgelagert.
 
-Der Index enthält nur **Kurzbeschreibung + Link**. Bei neuen, umbenannten oder ausgelagerten Repositories und wesentlichen Workbench-Themen wird er mitgepflegt.
+Der Index enthält nur **Kurzbeschreibung + Link**. Die verbindlichen operativen Regeln zur Indexpflege und zur Synchronisierung organisationsweiter Agentenregeln stehen in [`AGENTS.md`](./AGENTS.md).
