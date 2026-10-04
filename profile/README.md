@@ -22,6 +22,8 @@ Damit verbindet Context Loom insbesondere:
 
 Der zentrale [**Context Loom Index**](https://github.com/context-loom/.github/blob/main/INDEX.md) beschreibt alle Repositories und die wesentlichen noch in `_workbench` geführten Ansätze kurz und verweist auf die jeweilige Detaildokumentation.
 
+[**NEXT**](https://github.com/context-loom/.github/blob/main/NEXT.md) zeigt die persönliche Arbeits- und Prioritätssicht auf die aktuell relevanten Themen.
+
 Organisationsweite Arbeits- und Agentenvorgaben sind im [**`.github`-Repository**](https://github.com/context-loom/.github) beschrieben.
 
 ## Namenskonvention
