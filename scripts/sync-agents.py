@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Synchronize the Context Loom shared AGENTS.md block across repositories.
+"""Synchronize Context Loom agent instructions and housekeeping guidance.
 
 Requires an authenticated GitHub CLI (`gh auth status`).
 
@@ -19,8 +19,15 @@ from dataclasses import dataclass
 
 ORG = "context-loom"
 SOURCE_REPO = ".github"
-SOURCE_PATH = "AGENTS.md"
-TARGET_PATH = "AGENTS.md"
+
+AGENTS_SOURCE = "AGENTS.md"
+AGENTS_TARGET = "AGENTS.md"
+
+MANAGED_FILES = {
+    "housekeeping.md": ".context-loom/housekeeping.md",
+    "housekeeping-audit.md": ".context-loom/housekeeping-audit.md",
+}
+
 START = "<!-- context-loom:shared:start -->"
 END = "<!-- context-loom:shared:end -->"
 
@@ -35,6 +42,7 @@ def gh_json(path: str, *, method: str = "GET", payload: dict | None = None):
     cmd = ["gh", "api", path]
     if method != "GET":
         cmd += ["--method", method]
+
     try:
         if payload is None:
             run = subprocess.run(cmd, check=True, text=True, capture_output=True)
@@ -73,11 +81,10 @@ def extract_shared(content: str) -> str:
     end = content.find(END)
     if start < 0 or end < 0 or end < start:
         raise SystemExit("Shared-Marker in der zentralen AGENTS.md fehlen oder sind ungültig.")
-    end += len(END)
-    return content[start:end]
+    return content[start : end + len(END)]
 
 
-def local_skeleton(shared: str) -> str:
+def local_agents_skeleton(shared: str) -> str:
     return (
         "# Agent Instructions\n\n"
         "Der folgende Block wird aus `context-loom/.github/AGENTS.md` synchronisiert.\n"
@@ -88,7 +95,7 @@ def local_skeleton(shared: str) -> str:
     )
 
 
-def merge_existing(existing: str, shared: str) -> str | None:
+def merge_agents(existing: str, shared: str) -> str | None:
     start = existing.find(START)
     end = existing.find(END)
 
@@ -97,18 +104,27 @@ def merge_existing(existing: str, shared: str) -> str | None:
     if start < 0 or end < 0 or end < start:
         raise ValueError("unvollständige Shared-Marker")
 
-    end += len(END)
-    return existing[:start] + shared + existing[end:]
+    return existing[:start] + shared + existing[end + len(END) :]
 
 
-def put_file(repo: str, content: str, sha: str | None) -> None:
+def put_file(repo: str, path: str, content: str, sha: str | None, message: str) -> None:
     payload = {
-        "message": "docs: sync Context Loom agent instructions",
+        "message": message,
         "content": base64.b64encode(content.encode("utf-8")).decode("ascii"),
     }
     if sha:
         payload["sha"] = sha
-    gh_json(f"repos/{ORG}/{repo}/contents/{TARGET_PATH}", method="PUT", payload=payload)
+
+    gh_json(f"repos/{ORG}/{repo}/contents/{path}", method="PUT", payload=payload)
+
+
+def plan_file(repo: str, target: str, desired: str) -> tuple[str, str | None] | None:
+    existing = get_file(repo, target)
+    if existing is None:
+        return ("CREATE", None)
+    if existing.content == desired:
+        return None
+    return ("UPDATE", existing.sha)
 
 
 def main() -> int:
@@ -127,10 +143,17 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    source = get_file(SOURCE_REPO, SOURCE_PATH)
-    if source is None:
-        raise SystemExit(f"{ORG}/{SOURCE_REPO}/{SOURCE_PATH} nicht gefunden.")
-    shared = extract_shared(source.content)
+    source_agents = get_file(SOURCE_REPO, AGENTS_SOURCE)
+    if source_agents is None:
+        raise SystemExit(f"{ORG}/{SOURCE_REPO}/{AGENTS_SOURCE} nicht gefunden.")
+    shared = extract_shared(source_agents.content)
+
+    managed_sources: dict[str, str] = {}
+    for source_path in MANAGED_FILES:
+        source = get_file(SOURCE_REPO, source_path)
+        if source is None:
+            raise SystemExit(f"{ORG}/{SOURCE_REPO}/{source_path} nicht gefunden.")
+        managed_sources[source_path] = source.content
 
     repos = gh_json(f"orgs/{ORG}/repos?per_page=100&type=all")
     names = []
@@ -155,36 +178,68 @@ def main() -> int:
     manual = 0
 
     for repo in sorted(names, key=str.lower):
-        existing = get_file(repo, TARGET_PATH)
+        existing_agents = get_file(repo, AGENTS_TARGET)
 
-        if existing is None:
-            desired = local_skeleton(shared)
-            action = "CREATE"
-            sha = None
+        if existing_agents is None:
+            desired_agents = local_agents_skeleton(shared)
+            agents_action = ("CREATE", None)
         else:
             try:
-                desired = merge_existing(existing.content, shared)
+                desired_agents = merge_agents(existing_agents.content, shared)
             except ValueError as exc:
-                print(f"MANUAL {repo}: {exc}")
+                print(f"MANUAL {repo}/{AGENTS_TARGET}: {exc}")
                 manual += 1
+                desired_agents = None
+                agents_action = None
+
+            if desired_agents is None:
+                if agents_action is not None:
+                    print(f"MANUAL {repo}/{AGENTS_TARGET}: bestehende Datei ohne Context-Loom-Marker")
+                    manual += 1
+                agents_action = None
+            elif desired_agents == existing_agents.content:
+                agents_action = None
+            else:
+                agents_action = ("UPDATE", existing_agents.sha)
+
+        if agents_action:
+            changed += 1
+            action, sha = agents_action
+            if args.apply:
+                put_file(
+                    repo,
+                    AGENTS_TARGET,
+                    desired_agents,
+                    sha,
+                    "docs: sync Context Loom agent instructions",
+                )
+                print(f"{action:6} {repo}/{AGENTS_TARGET}")
+            else:
+                print(f"DRY-{action:6} {repo}/{AGENTS_TARGET}")
+        elif desired_agents is not None:
+            print(f"OK     {repo}/{AGENTS_TARGET}")
+
+        for source_path, target_path in MANAGED_FILES.items():
+            desired = managed_sources[source_path]
+            planned = plan_file(repo, target_path, desired)
+
+            if planned is None:
+                print(f"OK     {repo}/{target_path}")
                 continue
 
-            if desired is None:
-                print(f"MANUAL {repo}: bestehende AGENTS.md ohne Context-Loom-Marker")
-                manual += 1
-                continue
-            if desired == existing.content:
-                print(f"OK     {repo}")
-                continue
-            action = "UPDATE"
-            sha = existing.sha
-
-        changed += 1
-        if args.apply:
-            put_file(repo, desired, sha)
-            print(f"{action:6} {repo}")
-        else:
-            print(f"DRY-{action:6} {repo}")
+            changed += 1
+            action, sha = planned
+            if args.apply:
+                put_file(
+                    repo,
+                    target_path,
+                    desired,
+                    sha,
+                    "docs: sync Context Loom housekeeping guidance",
+                )
+                print(f"{action:6} {repo}/{target_path}")
+            else:
+                print(f"DRY-{action:6} {repo}/{target_path}")
 
     mode = "angewendet" if args.apply else "gefunden (Dry-Run)"
     print(f"\n{changed} Änderung(en) {mode}; {manual} manuelle Prüfung(en).")
