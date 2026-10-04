@@ -42,41 +42,45 @@ Der Index beschreibt Themen nur kurz. Fachliche Details und Arbeitsstände bleib
 
 ## Themen in `_workbench`
 
+**Workbench:** [`context-loom/_workbench`](https://github.com/context-loom/_workbench)
+
+Die sichtbaren Pfade sind relativ zum Root von `_workbench`.
+
 ### 3D-Analyse
-- [3D Feature Catalog](https://github.com/context-loom/_workbench/tree/main/3d-feature-catalog) – Merkmals- und Analysekatalog für 3D-Bauteile.
-- [3D Analysis](https://github.com/context-loom/_workbench/tree/main/3d-analysis) – Geometrie-PoCs, derzeit insbesondere Wandstärke und Spaltmaß per Raycasting.
+- [`3d-feature-catalog/`](https://github.com/context-loom/_workbench/tree/main/3d-feature-catalog) — **3D Feature Catalog** – Merkmals- und Analysekatalog für 3D-Bauteile.
+- [`3d-analysis/`](https://github.com/context-loom/_workbench/tree/main/3d-analysis) — **3D Analysis** – Geometrie-PoCs, derzeit insbesondere Wandstärke und Spaltmaß per Raycasting.
 
 ### AI, Research und Knowledge
-- [Epistemic Diversity](https://github.com/context-loom/_workbench/blob/main/ai/knowledge-research/epistemic-diversity.md) – Claim Extraction, Meaning Classes, Entailment, Coverage und Diversität für Research/RAG.
-- [Open Notebook](https://github.com/context-loom/_workbench/tree/main/ai/knowledge-research/open-notebook) – selbst gehostete Research-/Knowledge-Workspace-Schicht.
+- [`ai/knowledge-research/epistemic-diversity.md`](https://github.com/context-loom/_workbench/blob/main/ai/knowledge-research/epistemic-diversity.md) — **Epistemic Diversity** – Claim Extraction, Meaning Classes, Entailment, Coverage und Diversität für Research/RAG.
+- [`ai/knowledge-research/open-notebook/`](https://github.com/context-loom/_workbench/tree/main/ai/knowledge-research/open-notebook) — **Open Notebook** – selbst gehostete Research-/Knowledge-Workspace-Schicht.
 
 ### Agenten und Tooling
-- [NixOS Agent Worker PoC](https://github.com/context-loom/_workbench/tree/main/nixos-agent-worker-poc) – reproduzierbare Agent-Host-Umgebung.
-- [Macro-/Micro-Orchestration](https://github.com/context-loom/_workbench/blob/main/ideas/agent-orchestration/macro-micro-orchestration.md) – Trennung von fachlicher Orchestrierung, Agent Coordination und Ausführung.
-- [Agent Operations Layer](https://github.com/context-loom/_workbench/blob/main/ideas/agent-orchestration/agent-operations-layer.md) – Sessions, State, Messaging, Worktrees und Agent-Lifecycle.
-- [OpenShell](https://github.com/context-loom/_workbench/blob/main/ideas/agent-runtime/openshell.md) – Kandidat für sichere Agent-Runtime und Policy-Grenzen.
-- [Treg](https://github.com/context-loom/_workbench/blob/main/ideas/agent-tooling/treg.md) – Tool Registry, Credential Broker und Gateway.
-- [Tool-Gateway-Vergleich](https://github.com/context-loom/_workbench/blob/main/ideas/agent-tooling/comparison-tool-gateways.md) – Treg, ToolHive, MCP-Gateway und Eigenbau.
-- [Himalaya](https://github.com/context-loom/_workbench/blob/main/ideas/agent-tooling/himalaya.md) – CLI-Mailzugriff als Baustein für Agenten und Automationen.
+- [`nixos-agent-worker-poc/`](https://github.com/context-loom/_workbench/tree/main/nixos-agent-worker-poc) — **NixOS Agent Worker PoC** – reproduzierbare Agent-Host-Umgebung.
+- [`ideas/agent-orchestration/macro-micro-orchestration.md`](https://github.com/context-loom/_workbench/blob/main/ideas/agent-orchestration/macro-micro-orchestration.md) — **Macro-/Micro-Orchestration** – Trennung von fachlicher Orchestrierung, Agent Coordination und Ausführung.
+- [`ideas/agent-orchestration/agent-operations-layer.md`](https://github.com/context-loom/_workbench/blob/main/ideas/agent-orchestration/agent-operations-layer.md) — **Agent Operations Layer** – Sessions, State, Messaging, Worktrees und Agent-Lifecycle.
+- [`ideas/agent-runtime/openshell.md`](https://github.com/context-loom/_workbench/blob/main/ideas/agent-runtime/openshell.md) — **OpenShell** – Kandidat für sichere Agent-Runtime und Policy-Grenzen.
+- [`ideas/agent-tooling/treg.md`](https://github.com/context-loom/_workbench/blob/main/ideas/agent-tooling/treg.md) — **Treg** – Tool Registry, Credential Broker und Gateway.
+- [`ideas/agent-tooling/comparison-tool-gateways.md`](https://github.com/context-loom/_workbench/blob/main/ideas/agent-tooling/comparison-tool-gateways.md) — **Tool-Gateway-Vergleich** – Treg, ToolHive, MCP-Gateway und Eigenbau.
+- [`ideas/agent-tooling/himalaya.md`](https://github.com/context-loom/_workbench/blob/main/ideas/agent-tooling/himalaya.md) — **Himalaya** – CLI-Mailzugriff als Baustein für Agenten und Automationen.
 
 ### Knowledge Engineering
-- [Knowledge Compiler](https://github.com/context-loom/_workbench/blob/main/ideas/knowledge-compiler.md) – Git-native Wissensverarbeitung: Source → Compile → Link → Lint → Query → Recompile.
-- [Graphify](https://github.com/context-loom/_workbench/blob/main/ideas/repository-intelligence/graphify.md) – Repository-Knowledge-Graph für strukturierten Agent-Kontext.
-- [Decision Models](https://github.com/context-loom/_workbench/tree/main/ideas/decision-models) – explizite Entscheidungsmodelle wie Jev-lite/OpenJev.
+- [`ideas/knowledge-compiler.md`](https://github.com/context-loom/_workbench/blob/main/ideas/knowledge-compiler.md) — **Knowledge Compiler** – Git-native Wissensverarbeitung: Source → Compile → Link → Lint → Query → Recompile.
+- [`ideas/repository-intelligence/graphify.md`](https://github.com/context-loom/_workbench/blob/main/ideas/repository-intelligence/graphify.md) — **Graphify** – Repository-Knowledge-Graph für strukturierten Agent-Kontext.
+- [`ideas/decision-models/`](https://github.com/context-loom/_workbench/tree/main/ideas/decision-models) — **Decision Models** – explizite Entscheidungsmodelle wie Jev-lite/OpenJev.
 
 ### Anwendungen und UI-Konzepte
-- [Adaptive Spec Interview UI](https://github.com/context-loom/_workbench/blob/main/ideas/adaptive-spec-interview-ui.md) – von Idee und Entscheidungen über Spec bis Implementierung und Verifikation.
-- [Generalized JSON Viewer/Editor](https://github.com/context-loom/_workbench/blob/main/ideas/generalized-json-viewer-editor.md) – konfigurierbare fachliche Oberfläche für strukturierte JSON-Dateien.
-- [Document Signing](https://github.com/context-loom/_workbench/blob/main/ideas/document_signing.md) – Signatur-Orchestrierung mit Paperless-ngx, Zeichnungsordnung und Documenso.
-- [Printer Management Microservice](https://github.com/context-loom/_workbench/blob/main/ideas/printer-management-microservice.adoc) – Verwaltung, Spooling und Status mehrerer Netzwerk-Labeldrucker.
-- [Action Gateways](https://github.com/context-loom/_workbench/tree/main/www-actions-gateway) – kontrollierte Privilegiengrenze zwischen Webanwendungen und freigegebenen Systemaktionen.
+- [`ideas/adaptive-spec-interview-ui.md`](https://github.com/context-loom/_workbench/blob/main/ideas/adaptive-spec-interview-ui.md) — **Adaptive Spec Interview UI** – von Idee und Entscheidungen über Spec bis Implementierung und Verifikation.
+- [`ideas/generalized-json-viewer-editor.md`](https://github.com/context-loom/_workbench/blob/main/ideas/generalized-json-viewer-editor.md) — **Generalized JSON Viewer/Editor** – konfigurierbare fachliche Oberfläche für strukturierte JSON-Dateien.
+- [`ideas/document_signing.md`](https://github.com/context-loom/_workbench/blob/main/ideas/document_signing.md) — **Document Signing** – Signatur-Orchestrierung mit Paperless-ngx, Zeichnungsordnung und Documenso.
+- [`ideas/printer-management-microservice.adoc`](https://github.com/context-loom/_workbench/blob/main/ideas/printer-management-microservice.adoc) — **Printer Management Microservice** – Verwaltung, Spooling und Status mehrerer Netzwerk-Labeldrucker.
+- [`www-actions-gateway/`](https://github.com/context-loom/_workbench/tree/main/www-actions-gateway) — **Action Gateways** – kontrollierte Privilegiengrenze zwischen Webanwendungen und freigegebenen Systemaktionen.
 
 ### Referenzen und Technologiebeobachtung
-- [Authentise](https://github.com/context-loom/_workbench/blob/main/ideas/authentise.md) – Referenzmuster für Digital Thread, Provenance und Engineering Context.
-- [Heretic](https://github.com/context-loom/_workbench/blob/main/ideas/heretic.md) – Behavioral Model Editing mittels kontrastiver Aktivierungsanalyse.
+- [`ideas/authentise.md`](https://github.com/context-loom/_workbench/blob/main/ideas/authentise.md) — **Authentise** – Referenzmuster für Digital Thread, Provenance und Engineering Context.
+- [`ideas/heretic.md`](https://github.com/context-loom/_workbench/blob/main/ideas/heretic.md) — **Heretic** – Behavioral Model Editing mittels kontrastiver Aktivierungsanalyse.
 
 ### Betrieb und Hilfsmittel
-- [Windows Server](https://github.com/context-loom/_workbench/tree/main/windows-server) – Windows-Server-Konzepte, Tests und Betriebsnotizen.
+- [`windows-server/`](https://github.com/context-loom/_workbench/tree/main/windows-server) — **Windows Server** – Windows-Server-Konzepte, Tests und Betriebsnotizen.
 - [`cli/`](https://github.com/context-loom/_workbench/tree/main/cli) – wiederverwendbare CLI-Befehle für Linux, macOS und Windows.
 - [`scripts/`](https://github.com/context-loom/_workbench/tree/main/scripts) – allgemeine Hilfsskripte.
 
