@@ -2,7 +2,7 @@
 
 Diese Regeln beschreiben den Mindeststandard für das Aufräumen und Abschließen agentischer Änderungen in Context-Loom-Repositories.
 
-Sie ergänzen die organisationsweiten Regeln in [`AGENTS.md`](./AGENTS.md). Repo-spezifische Anweisungen können zusätzliche oder strengere Anforderungen festlegen.
+Sie ergänzen die organisationsweiten Regeln in der Root-`AGENTS.md` des jeweiligen Repositories. Repo-spezifische Anweisungen können zusätzliche oder strengere Anforderungen festlegen.
 
 ## Ziel
 
@@ -102,7 +102,7 @@ Prüfen, ob die Änderung Auswirkungen hat auf:
 - Architektur-/ADR-/Betriebsdokumentation;
 - lokale `AGENTS.md`;
 - Links innerhalb des Repositories;
-- [`context-loom/.github/INDEX.md`](./INDEX.md).
+- `context-loom/.github/INDEX.md`.
 
 Strukturelle Änderungen gelten erst dann als vollständig, wenn die dazugehörige Navigation und Dokumentation nicht offensichtlich veraltet zurückbleibt.
 
