@@ -179,28 +179,29 @@ def main() -> int:
 
     for repo in sorted(names, key=str.lower):
         existing_agents = get_file(repo, AGENTS_TARGET)
+        desired_agents = None
+        agents_action = None
 
         if existing_agents is None:
             desired_agents = local_agents_skeleton(shared)
             agents_action = ("CREATE", None)
         else:
             try:
-                desired_agents = merge_agents(existing_agents.content, shared)
+                merged_agents = merge_agents(existing_agents.content, shared)
             except ValueError as exc:
                 print(f"MANUAL {repo}/{AGENTS_TARGET}: {exc}")
                 manual += 1
-                desired_agents = None
-                agents_action = None
-
-            if desired_agents is None:
-                if agents_action is not None:
-                    print(f"MANUAL {repo}/{AGENTS_TARGET}: bestehende Datei ohne Context-Loom-Marker")
-                    manual += 1
-                agents_action = None
-            elif desired_agents == existing_agents.content:
-                agents_action = None
             else:
-                agents_action = ("UPDATE", existing_agents.sha)
+                if merged_agents is None:
+                    print(
+                        f"MANUAL {repo}/{AGENTS_TARGET}: "
+                        "bestehende Datei ohne Context-Loom-Marker"
+                    )
+                    manual += 1
+                else:
+                    desired_agents = merged_agents
+                    if desired_agents != existing_agents.content:
+                        agents_action = ("UPDATE", existing_agents.sha)
 
         if agents_action:
             changed += 1
