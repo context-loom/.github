@@ -8,6 +8,7 @@ Es ist die zentrale Stelle für Regeln und Übersichten, die nicht zu einem einz
 
 - [`profile/README.md`](./profile/README.md) – kurzer öffentlicher Einstieg in die Organisation
 - [`INDEX.md`](./INDEX.md) – zentraler Index aller Repositories und wesentlichen `_workbench`-Themen
+- [`NEXT.md`](./NEXT.md) – persönliche Arbeits- und Prioritätssicht auf die aktuellen Themen
 - [`AGENTS.md`](./AGENTS.md) – kanonische organisationsweite Agentenregeln
 - [`housekeeping.md`](./housekeeping.md) – laufende Housekeeping-Vorgaben für agentische Bearbeitung
 - [`housekeeping-audit.md`](./housekeeping-audit.md) – Methode für Housekeeping Review und Repository-Audit
