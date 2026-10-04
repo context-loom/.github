@@ -4,8 +4,8 @@ Diese Datei beschreibt die Prüfmethode für gezielte Housekeeping-Reviews und u
 
 Sie ergänzt:
 
-- [`AGENTS.md`](./AGENTS.md) – organisationsweite Arbeitsregeln;
-- [`housekeeping.md`](./housekeeping.md) – laufende Housekeeping-Vorgaben für jeden Arbeitsauftrag.
+- die Root-`AGENTS.md` des jeweiligen Repositories – organisationsweite und repo-spezifische Arbeitsregeln;
+- `housekeeping.md` im selben `.context-loom/`-Verzeichnis – laufende Housekeeping-Vorgaben für jeden Arbeitsauftrag.
 
 Housekeeping Review und Audit sind **Prüfaufträge**. Sie verändern nicht automatisch Dateien. Zunächst werden Findings mit Evidenz und Empfehlung erzeugt. Änderungen erfolgen anschließend bewusst in einem eigenen oder ausdrücklich erweiterten Arbeitsauftrag.
 
