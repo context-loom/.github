@@ -74,6 +74,9 @@ Die sichtbaren Pfade sind relativ zum Root von `_workbench`.
 - [`ai-allgemein/adaptive-spec-interview-ui.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/adaptive-spec-interview-ui.md) — **Adaptive Spec Interview UI** – von Idee und Entscheidungen über Spec bis Implementierung und Verifikation.
 - [`ai-allgemein/authentise.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/authentise.md) — **Authentise** – Referenzmuster für Digital Thread, Provenance und Engineering Context.
 
+### Compliance und Vorgaben
+- [`compliance-traceability/`](https://github.com/context-loom/_workbench/tree/main/compliance-traceability) — **Compliance Traceability** – generisches Modell für Quellenstruktur, atomare Anforderungen, Umsetzungszuordnung, Nachweise und Abdeckungsanalyse.
+
 ### Weitere Ideen und Anwendungen
 - [`ideas/generalized-json-viewer-editor.md`](https://github.com/context-loom/_workbench/blob/main/ideas/generalized-json-viewer-editor.md) — **Generalized JSON Viewer/Editor** – konfigurierbare fachliche Oberfläche für strukturierte JSON-Dateien.
 - [`ideas/document_signing.md`](https://github.com/context-loom/_workbench/blob/main/ideas/document_signing.md) — **Document Signing** – Signatur-Orchestrierung mit Paperless-ngx, Zeichnungsordnung und Documenso.
