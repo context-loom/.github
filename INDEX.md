@@ -36,6 +36,7 @@ Der Index beschreibt Themen nur kurz. Fachliche Details und Arbeitsstände bleib
 
 ### Fachliche Anwendungen und Wissen
 - [`compliance-traceability`](https://github.com/context-loom/compliance-traceability) – generisches Modell für Quellenstruktur, atomare Anforderungen, Umsetzungszuordnung, Nachweise und Abdeckungsanalyse.
+  - [IDP – Intelligent Document Processing](https://github.com/context-loom/compliance-traceability/tree/main/IDP-Intelligent%20Document%20Processing) – Werkzeugvergleich für Dokumentstrukturierung, sinnerhaltende Anforderungsextraktion und Qualitätsprüfung.
 - [`HINWEISGEBERSYSTEM`](https://github.com/context-loom/HINWEISGEBERSYSTEM) – internes Hinweisgebersystem mit vertraulichem Workflow und Fristensteuerung.
 - [`babtec`](https://github.com/context-loom/babtec) – Kontexte, Analysen und Werkzeuge rund um BabtecQ.
 - [`fkm-sls-sales-onboarding`](https://github.com/context-loom/fkm-sls-sales-onboarding) – Wissensbasis und Einarbeitung für technische und wirtschaftliche SLS-Qualifizierung.
