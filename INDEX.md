@@ -11,6 +11,7 @@ Der Index beschreibt Themen nur kurz. Fachliche Details und Arbeitsstände bleib
 - [`_workbench`](https://github.com/context-loom/_workbench) – Werkbank für Recherche, Konzepte, frühe Lösungsansätze, Hilfsmittel und PoCs.
 
 ### AI und Software Engineering
+- [`ai-allgemein`](https://github.com/context-loom/ai-allgemein) – zentrale Ablage für allgemeine AI-/Agenten-Architektur, Research, Knowledge Engineering, Tooling und PoCs aus dem Projekt AI.Allgemein.
 - [`ai-local`](https://github.com/context-loom/ai-local) – lokale AI-Infrastruktur, Modell-Gateway, Compute und Agenten-Zielbild.
 - [`ai-prompting-framework`](https://github.com/context-loom/ai-prompting-framework) – wiederverwendbare Prompt-, Recherche-, Klassifikations- und Scoring-Workflows.
 - [`software-engineering-standards`](https://github.com/context-loom/software-engineering-standards) – gemeinsame Architektur-, Technologie-, UI-, Betriebs- und Coding-Standards.
@@ -49,32 +50,6 @@ Die sichtbaren Pfade sind relativ zum Root von `_workbench`.
 ### 3D-Analyse
 - [`3d-feature-catalog/`](https://github.com/context-loom/_workbench/tree/main/3d-feature-catalog) — **3D Feature Catalog** – Merkmals- und Analysekatalog für 3D-Bauteile.
 - [`3d-analysis/`](https://github.com/context-loom/_workbench/tree/main/3d-analysis) — **3D Analysis** – Geometrie-PoCs, derzeit insbesondere Wandstärke und Spaltmaß per Raycasting.
-
-### AI Allgemein
-- [`ai-allgemein/`](https://github.com/context-loom/_workbench/tree/main/ai-allgemein) — gemeinsame Klammer für Ergebnisse aus dem ChatGPT-Projekt **„ai-allgemein“**: AI-/Agenten-Architektur, Modelle, Research, Knowledge Engineering, Tooling und PoCs.
-
-#### Agenten, Runtime und Tooling
-- [`ai-allgemein/nixos-agent-worker-poc/`](https://github.com/context-loom/_workbench/tree/main/ai-allgemein/nixos-agent-worker-poc) — **NixOS Agent Worker PoC** – reproduzierbare Agent-Host-Umgebung.
-- [`ai-allgemein/agent-orchestration/macro-micro-orchestration.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/agent-orchestration/macro-micro-orchestration.md) — **Macro-/Micro-Orchestration** – Trennung von fachlicher Orchestrierung, Agent Coordination und Ausführung.
-- [`ai-allgemein/agent-orchestration/function-tools-mcp-agent-protocols.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/agent-orchestration/function-tools-mcp-agent-protocols.md) — **Function Tools, MCP und Agent-Protokolle** – Recherche und übernommene Architekturgrundsätze zu Skills, MCP, AG-UI/A2UI, A2A und Frameworks.
-- [`ai-allgemein/agent-orchestration/a2a-internal-task-model.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/agent-orchestration/a2a-internal-task-model.md) — **A2A-inspiriertes internes Task-Modell** – Task/Message/Artifact/Context als interne Semantik und Vorbereitung auf spätere A2A-Grenzen.
-- [`ai-allgemein/agent-orchestration/agent-operations-layer.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/agent-orchestration/agent-operations-layer.md) — **Agent Operations Layer** – Sessions, State, Messaging, Worktrees und Agent-Lifecycle.
-- [`ai-allgemein/agent-runtime/openshell.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/agent-runtime/openshell.md) — **OpenShell** – Kandidat für sichere Agent-Runtime und Policy-Grenzen.
-- [`ai-allgemein/agent-tooling/treg.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/agent-tooling/treg.md) — **Treg** – Tool Registry, Credential Broker und Gateway.
-- [`ai-allgemein/agent-tooling/comparison-tool-gateways.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/agent-tooling/comparison-tool-gateways.md) — **Tool-Gateway-Vergleich** – Treg, ToolHive, MCP-Gateway und Eigenbau.
-- [`ai-allgemein/agent-tooling/himalaya.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/agent-tooling/himalaya.md) — **Himalaya** – CLI-Mailzugriff als Baustein für Agenten und Automationen.
-
-#### Models, Research und Knowledge Engineering
-- [`ai-allgemein/decision-models/`](https://github.com/context-loom/_workbench/tree/main/ai-allgemein/decision-models) — **Decision Models** – lokale Decision Models / System-1-Modelle wie Jev-lite/OpenJev.
-- [`ai-allgemein/knowledge-research/epistemic-diversity.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/knowledge-research/epistemic-diversity.md) — **Epistemic Diversity** – Claim Extraction, Meaning Classes, Entailment, Coverage und Diversität für Research/RAG.
-- [`ai-allgemein/knowledge-research/open-notebook/`](https://github.com/context-loom/_workbench/tree/main/ai-allgemein/knowledge-research/open-notebook) — **Open Notebook** – selbst gehostete Research-/Knowledge-Workspace-Schicht.
-- [`ai-allgemein/knowledge-compiler.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/knowledge-compiler.md) — **Knowledge Compiler** – Git-native Wissensverarbeitung: Source → Compile → Link → Lint → Query → Recompile.
-- [`ai-allgemein/repository-intelligence/graphify.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/repository-intelligence/graphify.md) — **Graphify** – Repository-Knowledge-Graph für strukturierten Agent-Kontext.
-- [`ai-allgemein/heretic.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/heretic.md) — **Heretic** – Behavioral Model Editing mittels kontrastiver Aktivierungsanalyse.
-
-#### Übertragbare Anwendungen und Referenzen
-- [`ai-allgemein/adaptive-spec-interview-ui.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/adaptive-spec-interview-ui.md) — **Adaptive Spec Interview UI** – von Idee und Entscheidungen über Spec bis Implementierung und Verifikation.
-- [`ai-allgemein/authentise.md`](https://github.com/context-loom/_workbench/blob/main/ai-allgemein/authentise.md) — **Authentise** – Referenzmuster für Digital Thread, Provenance und Engineering Context.
 
 ### Compliance und Vorgaben
 - [`compliance-traceability/`](https://github.com/context-loom/_workbench/tree/main/compliance-traceability) — **Compliance Traceability** – generisches Modell für Quellenstruktur, atomare Anforderungen, Umsetzungszuordnung, Nachweise und Abdeckungsanalyse.
