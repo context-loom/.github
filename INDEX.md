@@ -35,6 +35,7 @@ Der Index beschreibt Themen nur kurz. Fachliche Details und Arbeitsstände bleib
 - [`start.fkm.local`](https://github.com/context-loom/start.fkm.local) – interne Browser-Startseite für Anwendungen und Dienste.
 
 ### Fachliche Anwendungen und Wissen
+- [`compliance-traceability`](https://github.com/context-loom/compliance-traceability) – generisches Modell für Quellenstruktur, atomare Anforderungen, Umsetzungszuordnung, Nachweise und Abdeckungsanalyse.
 - [`HINWEISGEBERSYSTEM`](https://github.com/context-loom/HINWEISGEBERSYSTEM) – internes Hinweisgebersystem mit vertraulichem Workflow und Fristensteuerung.
 - [`babtec`](https://github.com/context-loom/babtec) – Kontexte, Analysen und Werkzeuge rund um BabtecQ.
 - [`fkm-sls-sales-onboarding`](https://github.com/context-loom/fkm-sls-sales-onboarding) – Wissensbasis und Einarbeitung für technische und wirtschaftliche SLS-Qualifizierung.
@@ -50,9 +51,6 @@ Die sichtbaren Pfade sind relativ zum Root von `_workbench`.
 ### 3D-Analyse
 - [`3d-feature-catalog/`](https://github.com/context-loom/_workbench/tree/main/3d-feature-catalog) — **3D Feature Catalog** – Merkmals- und Analysekatalog für 3D-Bauteile.
 - [`3d-analysis/`](https://github.com/context-loom/_workbench/tree/main/3d-analysis) — **3D Analysis** – Geometrie-PoCs, derzeit insbesondere Wandstärke und Spaltmaß per Raycasting.
-
-### Compliance und Vorgaben
-- [`compliance-traceability/`](https://github.com/context-loom/_workbench/tree/main/compliance-traceability) — **Compliance Traceability** – generisches Modell für Quellenstruktur, atomare Anforderungen, Umsetzungszuordnung, Nachweise und Abdeckungsanalyse.
 
 ### Weitere Ideen und Anwendungen
 - [`ideas/generalized-json-viewer-editor.md`](https://github.com/context-loom/_workbench/blob/main/ideas/generalized-json-viewer-editor.md) — **Generalized JSON Viewer/Editor** – konfigurierbare fachliche Oberfläche für strukturierte JSON-Dateien.
