@@ -36,6 +36,7 @@ Der Index beschreibt Themen nur kurz. Fachliche Details und Arbeitsstände bleib
 - [`start.fkm.local`](https://github.com/context-loom/start.fkm.local) – interne Browser-Startseite für Anwendungen und Dienste.
 
 ### Fachliche Anwendungen und Wissen
+- [`fkm-central`](https://github.com/context-loom/fkm-central) – erweiterbare Stammdaten- und Katalogplattform für eigene Organisationen mit kontrollierten Beziehungen, Governance und konfigurierbaren CRUD-Ansichten.
 - [`3d-feature-catalog`](https://github.com/context-loom/3d-feature-catalog) – Merkmals- und Analysekatalog für 3D-Druck-Bauteile, Geometrie-Features und nachgelagerte Bewertungsmodelle.
 - [`compliance-traceability`](https://github.com/context-loom/compliance-traceability) – generisches Modell für Quellenstruktur, atomare Anforderungen, Umsetzungszuordnung, Nachweise und Abdeckungsanalyse.
   - [IDP – Intelligent Document Processing](https://github.com/context-loom/compliance-traceability/tree/main/IDP-Intelligent%20Document%20Processing) – Werkzeugvergleich für Dokumentstrukturierung, sinnerhaltende Anforderungsextraktion und Qualitätsprüfung.
