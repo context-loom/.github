@@ -21,6 +21,7 @@ Der Index beschreibt Themen nur kurz. Fachliche Details und Arbeitsstände bleib
 - [`pdf-review`](https://github.com/context-loom/pdf-review) – Annotation, Prüfung, Bewertung und Korrektur von PDF-Dokumenten.
 - [`pdf-review-demo`](https://github.com/context-loom/pdf-review-demo) – reines Deploy-/Ausgabe-Repository der statischen PDF-Review-Demo.
 - [`integrated-management-system`](https://github.com/context-loom/integrated-management-system) – maschinenlesbares IMS mit JSON als führendem Dokumentmodell.
+- [`bpmn-editor`](https://github.com/context-loom/bpmn-editor) – kollaborativer BPMN-Editor für Prozessmodellierung, Versionierung, Review und spätere IMS-/Workflow-Integration.
 - [`quality-analysis-toolbox`](https://github.com/context-loom/quality-analysis-toolbox) – Werkzeugkasten für Root-Cause- und Qualitätsanalysen.
 
 ### idPlan
@@ -35,6 +36,7 @@ Der Index beschreibt Themen nur kurz. Fachliche Details und Arbeitsstände bleib
 - [`start.fkm.local`](https://github.com/context-loom/start.fkm.local) – interne Browser-Startseite für Anwendungen und Dienste.
 
 ### Fachliche Anwendungen und Wissen
+- [`3d-feature-catalog`](https://github.com/context-loom/3d-feature-catalog) – Merkmals- und Analysekatalog für 3D-Druck-Bauteile, Geometrie-Features und nachgelagerte Bewertungsmodelle.
 - [`compliance-traceability`](https://github.com/context-loom/compliance-traceability) – generisches Modell für Quellenstruktur, atomare Anforderungen, Umsetzungszuordnung, Nachweise und Abdeckungsanalyse.
   - [IDP – Intelligent Document Processing](https://github.com/context-loom/compliance-traceability/tree/main/IDP-Intelligent%20Document%20Processing) – Werkzeugvergleich für Dokumentstrukturierung, sinnerhaltende Anforderungsextraktion und Qualitätsprüfung.
 - [`HINWEISGEBERSYSTEM`](https://github.com/context-loom/HINWEISGEBERSYSTEM) – internes Hinweisgebersystem mit vertraulichem Workflow und Fristensteuerung.
@@ -50,7 +52,6 @@ Der Index beschreibt Themen nur kurz. Fachliche Details und Arbeitsstände bleib
 Die sichtbaren Pfade sind relativ zum Root von `_workbench`.
 
 ### 3D-Analyse
-- [`3d-feature-catalog/`](https://github.com/context-loom/_workbench/tree/main/3d-feature-catalog) — **3D Feature Catalog** – Merkmals- und Analysekatalog für 3D-Bauteile.
 - [`3d-analysis/`](https://github.com/context-loom/_workbench/tree/main/3d-analysis) — **3D Analysis** – Geometrie-PoCs, derzeit insbesondere Wandstärke und Spaltmaß per Raycasting.
 
 ### Weitere Ideen und Anwendungen
