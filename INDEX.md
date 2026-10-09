@@ -15,6 +15,7 @@ Der Index beschreibt Themen nur kurz. Fachliche Details und Arbeitsstände bleib
 - [`ai-local`](https://github.com/context-loom/ai-local) – lokale AI-Infrastruktur, Modell-Gateway, Compute und Agenten-Zielbild.
 - [`ai-prompting-framework`](https://github.com/context-loom/ai-prompting-framework) – wiederverwendbare Prompt-, Recherche-, Klassifikations- und Scoring-Workflows.
 - [`software-engineering-standards`](https://github.com/context-loom/software-engineering-standards) – gemeinsame Architektur-, Technologie-, UI-, Betriebs- und Coding-Standards.
+- [`json2form`](https://github.com/context-loom/json2form) – wiederverwendbarer, schemavalidierter Roundtrip von JSON-Daten über bearbeitbare Formulare zurück zu JSON.
 
 ### Dokumente, Zeichnungen, Qualität und IMS
 - [`pdf-drawing-analysis`](https://github.com/context-loom/pdf-drawing-analysis) – automatische Analyse technischer PDF-Zeichnungen.
